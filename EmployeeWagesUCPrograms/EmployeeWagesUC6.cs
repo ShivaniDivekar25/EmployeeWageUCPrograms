@@ -16,7 +16,7 @@ namespace EmployeeWagesUCPrograms
         public const int NUM_OF_WORKING_DAYS = 20;
         public const int MAX_RATE_IN_MONTH = 100;
 
-        //Created method EmployeeUC6
+        //Created method Employee wage UC6 & UC7
         public static void EmployeeUC6(int empCheck5)
         {
             int empHrs = 0, totalEmpHrs = 0, totalWorkingDays = 0;
