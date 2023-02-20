@@ -8,7 +8,7 @@ namespace EmployeeWagesUCPrograms
         {
             Console.WriteLine("Welcome to Employee Wages Prgrams");
             Console.WriteLine("Please enter option given below");
-            Console.WriteLine("1:Employee is present or absent UC1\n2:Employee Wage UC2\n3:Employee wage UC3\n4:Employee wage UC4\n5:Employee wage UC5\n6:Employee wage UC6\n7:Refactor Employee wage UC7\n8:Refactor to compute multiple company wages\n9:Compute total wages for every company\n10:Manage multiple companies emp wage");
+            Console.WriteLine("1:Employee is present or absent UC1\n2:Employee Wage UC2\n3:Employee wage UC3\n4:Employee wage UC4\n5:Employee wage UC5\n6:Employee wage UC6\n7:Refactor Employee wage UC7\n8:Refactor to compute multiple company wages\n9:Compute total wages for every company\n10:Manage multiple companies emp wage\n11:");
             int option = Convert.ToInt32(Console.ReadLine());
             //Switch case to call different method 
             switch (option)
@@ -66,6 +66,12 @@ namespace EmployeeWagesUCPrograms
                     employeeWageBuilder.AddCompanyEmpWage("Reliance", 10, 4, 20);
                     employeeWageBuilder.ComputeEmpWagesForCompany();
                     Console.WriteLine();
+                    break;
+                case 11:
+                    EmployeeWageBuilder builder = new EmployeeWageBuilder();
+                    builder.AddCompanyEmpWage("DMart", 20, 5, 10);
+                    builder.AddCompanyEmpWage("Reliance", 10, 4, 20);
+                    builder.ComputeEmpWagesForCompany();
                     break;
                 default:
                     Console.WriteLine("Please enter right option");

@@ -26,7 +26,7 @@ namespace EmployeeWagesUCPrograms
         }
         public string ToString()
         {
-            return "Total Emp Wage for company: " + this.company + " is: " + this.totalEmpWages;
+            return $"Company:{company} RateperHr:{empRatePerHr} Days:{numOfWorkingDays} Hrs:{maxHrsPerMonth}";
         }
     }
 }
