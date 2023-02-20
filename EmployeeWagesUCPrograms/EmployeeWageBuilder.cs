@@ -11,6 +11,7 @@ namespace EmployeeWagesUCPrograms
         public const int IS_PARTTIME = 1;
         public const int IS_FULLTIME = 2;
         List<CompanyEmpWage> list;
+        Dictionary<string, CompanyEmpWage> dic;
         //public int numOfCompany = 0;
         //public CompanyEmpWage[] companyEmpWageArray;
 
@@ -18,6 +19,7 @@ namespace EmployeeWagesUCPrograms
         {
             //this.companyEmpWageArray = new CompanyEmpWage[5];
             list = new List<CompanyEmpWage>();
+            dic = new Dictionary<string, CompanyEmpWage>();
         }
         public void AddCompanyEmpWage(string company, int empRatePerHr, int numOfWorkingDays, int maxHrsPerMonth)
         {
@@ -25,6 +27,11 @@ namespace EmployeeWagesUCPrograms
             //companyEmpWageArray[this.numOfCompany] = new CompanyEmpWage(company, empRatePerHr, numOfWorkingDays, maxHrsPerMonth);
             //numOfCompany++;
             list.Add(comp);
+            dic.Add(company, comp);
+        }
+        public int GetTotalWageBasedOnCompany(string companyName)
+        {
+            return dic[companyName].totalEmpWages;
         }
         public void ComputeEmpWagesForCompany()
         {
